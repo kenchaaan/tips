@@ -2,12 +2,18 @@
 
 usage() {
   cat << EOF
+
 Execute your commands on the target cluster with ansible
+
 Usage:
   $(basename $0) CLUSTER_NAME COMMAND1 COMMAND2(ARG1) COMMAND3(ARG2) ...
-Example:
+
+Examples:
   # Get the result of "uname -n" on util servers
   $(basename $0) util uname -n
+  # Get the result of "ls | grep bin" on util servers
+  $(basename $0) util "ls | grep bin"
+
 EOF
 }
 
